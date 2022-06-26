@@ -1,0 +1,28 @@
+package com.wei.xd_class.mapper;
+
+import com.wei.xd_class.domain.Video;
+import com.wei.xd_class.domain.VideoBanner;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
+
+import javax.websocket.server.PathParam;
+import java.util.List;
+
+/**
+ * @author www
+ * @date 2022/6/25 14:10
+ * @description: TODO
+ */
+@Repository
+public interface VideoMapper {
+    /**
+     * 展示所有的video列表
+     * @return
+     */
+    List<Video> videoList();
+
+    List<VideoBanner> videoBannerList();
+
+
+    Video findDetailById(@PathParam("id") Integer id);
+}
