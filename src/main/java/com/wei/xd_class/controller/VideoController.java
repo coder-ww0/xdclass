@@ -1,7 +1,7 @@
 package com.wei.xd_class.controller;
 
-import com.wei.xd_class.domain.Video;
-import com.wei.xd_class.domain.VideoBanner;
+import com.wei.xd_class.model.entity.Video;
+import com.wei.xd_class.model.entity.VideoBanner;
 import com.wei.xd_class.service.VideoService;
 import com.wei.xd_class.utils.JsonData;
 import io.swagger.annotations.Api;

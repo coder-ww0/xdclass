@@ -1,6 +1,6 @@
 package com.wei.xd_class.mapper;
 
-import com.wei.xd_class.domain.User;
+import com.wei.xd_class.model.entity.User;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -25,4 +25,11 @@ public interface UserMapper {
      * @return
      */
     User findByPhone(@Param("phone") String phone);
+
+    /**
+     * 登录
+     * @param loginBO
+     * @return
+     */
+    User findByPhoneAndPwd(@Param("phone") String phone, @Param("pwd") String pwd);
 }

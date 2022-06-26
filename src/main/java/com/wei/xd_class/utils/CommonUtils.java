@@ -29,4 +29,9 @@ public class CommonUtils {
         }
         return null;
     }
+
+    public static void main(String[] args) {
+        String password = MD5("123456");
+        System.out.println(password);
+    }
 }

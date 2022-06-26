@@ -1,7 +1,7 @@
 package com.wei.xd_class.service.impl;
 
-import com.wei.xd_class.domain.Video;
-import com.wei.xd_class.domain.VideoBanner;
+import com.wei.xd_class.model.entity.Video;
+import com.wei.xd_class.model.entity.VideoBanner;
 import com.wei.xd_class.mapper.VideoMapper;
 import com.wei.xd_class.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;

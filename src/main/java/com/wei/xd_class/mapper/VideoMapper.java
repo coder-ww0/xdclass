@@ -1,8 +1,7 @@
 package com.wei.xd_class.mapper;
 
-import com.wei.xd_class.domain.Video;
-import com.wei.xd_class.domain.VideoBanner;
-import org.apache.ibatis.annotations.Mapper;
+import com.wei.xd_class.model.entity.Video;
+import com.wei.xd_class.model.entity.VideoBanner;
 import org.springframework.stereotype.Repository;
 
 import javax.websocket.server.PathParam;

@@ -1,6 +1,6 @@
 package com.wei.xd_class.service;
 
-import com.wei.xd_class.domain.User;
+import com.wei.xd_class.model.entity.User;
 
 import java.util.Map;
 
@@ -13,4 +13,6 @@ public interface UserService {
     int saveUser(Map<String, String> userInfo);
 
     User findByPhone(String phone);
+
+    String findByPhoneAndPwd(String phone, String pwd);
 }

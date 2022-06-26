@@ -1,10 +1,10 @@
 package com.wei.xd_class.service.impl;
 
-import com.wei.xd_class.domain.User;
+import com.wei.xd_class.model.entity.User;
 import com.wei.xd_class.mapper.UserMapper;
 import com.wei.xd_class.service.UserService;
 import com.wei.xd_class.utils.CommonUtils;
-import org.checkerframework.checker.units.qual.A;
+import com.wei.xd_class.utils.JWTUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,6 +37,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByPhone(String phone) {
         return userMapper.findByPhone(phone);
+    }
+
+    @Override
+    public String findByPhoneAndPwd(String phone, String pwd) {
+        User user = userMapper.findByPhoneAndPwd(phone, CommonUtils.MD5(pwd));
+        if (user == null) {
+            return null;
+        } else {
+            String token = JWTUtils.generateJsonWenToken(user);
+            return token;
+        }
     }
 
     private User parseToUser(Map<String, String> userInfo) {

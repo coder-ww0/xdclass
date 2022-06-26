@@ -1,4 +1,4 @@
-package com.wei.xd_class.domain;
+package com.wei.xd_class.model.entity;
 
 import java.util.Date;
 

@@ -1,5 +1,7 @@
 package com.wei.xd_class.controller;
 
+import com.wei.xd_class.model.bo.LoginBO;
+import com.wei.xd_class.model.vo.UserVO;
 import com.wei.xd_class.service.UserService;
 import com.wei.xd_class.utils.JsonData;
 import io.swagger.annotations.Api;
@@ -34,5 +36,12 @@ public class UserController {
             return JsonData.buildSuccess("用户注册成功");
         }
         return JsonData.buildError("用户注册失败");
+    }
+
+    @PostMapping("/login")
+    @ApiOperation("用户登录接口")
+    public JsonData login(@RequestBody LoginBO loginBO) {
+        String token = userService.findByPhoneAndPwd(loginBO.getPhone(), loginBO.getPwd());
+        return token == null ? JsonData.buildError("账号或密码错误") : JsonData.buildSuccess(token);
     }
 }

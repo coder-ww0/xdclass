@@ -1,16 +1,14 @@
-package com.wei.xd_class.domain.vo;
-
-import com.wei.xd_class.domain.Chapter;
+package com.wei.xd_class.model.entity;
 
 import java.util.Date;
 import java.util.List;
 
 /**
  * @author www
- * @date 2022/6/25 15:40
- * @description: TODO
+ * @date 2022/6/25 12:08
+ * @description: 视频
  */
-public class VideoDetail {
+public class Video {
     private Integer id;
     private String title;
     private String summary;
@@ -86,7 +84,7 @@ public class VideoDetail {
 
     @Override
     public String toString() {
-        return "VideoDetail{" +
+        return "Video{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", summary='" + summary + '\'' +
@@ -94,7 +92,6 @@ public class VideoDetail {
                 ", price=" + price +
                 ", createTime=" + createTime +
                 ", point=" + point +
-                ", chapterList=" + chapterList +
                 '}';
     }
 }
