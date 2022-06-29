@@ -15,4 +15,6 @@ public interface UserService {
     User findByPhone(String phone);
 
     String findByPhoneAndPwd(String phone, String pwd);
+
+    User finByUserId(Integer userId);
 }

@@ -33,7 +33,6 @@ public class VideoController {
     @ApiOperation("展示所有的视频列表信息")
     public JsonData listVideo() {
         List<Video> videoList = videoService.listVideo();
-        int i = 1 / 0;
         return JsonData.buildSuccess(videoList);
     }
 

@@ -2,6 +2,7 @@ package com.wei.xd_class.mapper;
 
 import com.wei.xd_class.model.entity.Video;
 import com.wei.xd_class.model.entity.VideoBanner;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import javax.websocket.server.PathParam;
@@ -22,6 +23,7 @@ public interface VideoMapper {
 
     List<VideoBanner> videoBannerList();
 
-
     Video findDetailById(@PathParam("id") Integer id);
+
+    Video findById(@Param("videoId") int videoId);
 }

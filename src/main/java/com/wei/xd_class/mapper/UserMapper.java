@@ -1,6 +1,7 @@
 package com.wei.xd_class.mapper;
 
 import com.wei.xd_class.model.entity.User;
+import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -28,8 +29,15 @@ public interface UserMapper {
 
     /**
      * 登录
-     * @param loginBO
+     * @param
      * @return
      */
     User findByPhoneAndPwd(@Param("phone") String phone, @Param("pwd") String pwd);
+
+    /**
+     * 根据用户id查找用户信息
+     * @param userId
+     * @return
+     */
+    User findByUserId(@Param("userId") Integer userId);
 }

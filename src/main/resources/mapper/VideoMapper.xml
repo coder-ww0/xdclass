@@ -57,8 +57,12 @@
 
         where v.id = #{video_id}
         order by c.ordered,e.num asc
+    </select>
 
-
+    <select id="findById" resultType="com.wei.xd_class.model.entity.Video">
+        SELECT *
+        FROM video
+        WHERE id = #{videoId}
     </select>
 
 </mapper>
