@@ -31,7 +31,7 @@ public class VideoOrderController {
      * 下单接口
      * @return JsonData
      */
-    @RequestMapping("/save")
+    @PostMapping("/save")
     @ApiOperation("视频下单")
     public JsonData saveOrder(@RequestBody VideoOrderBO videoOrderBO, HttpServletRequest request) {
         Integer userId = (Integer) request.getAttribute("user_id");

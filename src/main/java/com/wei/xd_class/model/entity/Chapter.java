@@ -1,5 +1,8 @@
 package com.wei.xd_class.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Date;
 import java.util.List;
 
@@ -10,11 +13,14 @@ import java.util.List;
  */
 public class Chapter {
     private Integer id;
+    @JsonProperty("video_id")
     private Integer videoId;
     private String title;
     private Integer ordered;
+    @JsonProperty("create_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createTime;
-
+    @JsonProperty("episode_list")
     List<Episode> episodeList;
 
     public Integer getId() {
